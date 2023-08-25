@@ -5,13 +5,13 @@ import { DummyEvent } from "@/components/event/event";
 
 const Home = () => {
   const allEvents = getAllEvents().map((item) => (
-    <DummyEvent dummyEvent={item} />
+    <DummyEvent key={item.id} dummyEvent={item} />
   ));
 
   return (
     <List>
       {allEvents.map((item) => (
-        <ListItem>{item}</ListItem>
+        <ListItem key={item.key}>{item}</ListItem>
       ))}
     </List>
   );
